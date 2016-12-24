@@ -45,20 +45,27 @@ class JobEntrySubsystem {
       this.connected = true;
     });
   }
-  disconnect(){
-    this.ftpSession.raw.quit(function(err, data) {
-    if (err) return console.error(err);
-    console.log("Bye!");
-});
+  disconnect() {
+    this.ftpSession.raw.quit(function (err, data) {
+      if (err) return console.error(err);
+      this.connected = false;
+      console.log('Disconnected with: ', data);
+      console.log("Bye!");
+    });
   }
-  submitJob(){}
-  retrieveJob(){}
-  deleteJob(){}
-  processJobOutput(){}
-  processJob(){}
-  loadConfig(){}
-  createConfig(){}
-  closeConnection(){}
+  submitJob(file) {
+    if (!this.connected) {
+      throw "Cannot submit Job. Not connected to JES.";
+    }
+    // read JCL file from filesystem and load into memory
+  }
+  retrieveJob() { }
+  deleteJob() { }
+  processJobOutput() { }
+  processJob() { }
+  loadConfig() { }
+  createConfig() { }
+  closeConnection() { }
 }
 
 module.exports = JobEntrySubsystem;
