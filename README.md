@@ -1,5 +1,5 @@
 # mainframe-job
-*The simple Node.js module for interacting with z/OS Job Entry Subsystem*
+*The simple Node.js module for interacting with the z/OS Job Entry Subsystem*
 
 # What is a mainframe?
 Mainframes are specialized data processing systems built for massively concurrent I/O. Modern IBM mainframes use the z/Architecture (also known as s390x), a modern 64-bit architecture that extends the IBM System/360 architecture released in 1964. The dominant operating system of the IBM Mainframe architecture is z/OS, a system that is descended from the OS/360 operating system famously described in the software engineering classic [The Mythical Man Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month).
