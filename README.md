@@ -13,8 +13,9 @@ mainframe-job is a Node.js module that wrappers the z/OS-specific services made 
 This module is inspired by a python script written by Northern Illinois University called [JESzftp](https://github.com/niumainframe/JESftp). There aren't many universities teaching mainframes these days, and it's awesome to see students working to bridge traditional Enterprise technologies with the world of open-source software. Go Huskies!!!
 
 # Useful References
-http://www.ibm.com/support/knowledgecenter/SSLTBW_2.1.0/com.ibm.zos.v2r1.halu001/intfjessubmitstep.htm
-https://www.npmjs.com/package/jsftp
-https://docs.python.org/2/library/ftplib.html
-https://media.blackhat.com/us-13/US-13-Young-Mainframes-The-Past-Will-Come-Back-to-Haunt-You-WP.pdf
-http://www.ibm.com/support/knowledgecenter/SSLTBW_2.1.0/com.ibm.zos.v2r1.bpxa400/xbat.htm
+
+- http://www.ibm.com/support/knowledgecenter/SSLTBW_2.1.0/com.ibm.zos.v2r1.halu001/intfjessubmitstep.htm
+- https://www.npmjs.com/package/jsftp
+- https://docs.python.org/2/library/ftplib.html
+- https://media.blackhat.com/us-13/US-13-Young-Mainframes-The-Past-Will-Come-Back-to-Haunt-You-WP.pdf
+- http://www.ibm.com/support/knowledgecenter/SSLTBW_2.1.0/com.ibm.zos.v2r1.bpxa400/xbat.htm
