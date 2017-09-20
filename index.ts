@@ -1,5 +1,4 @@
 import * as ftp from "ftp";
-import * as Promise from "promise";
 import * as getRawBody from "raw-body";
 import { Readable } from "stream";
 
@@ -8,11 +7,6 @@ import { Readable } from "stream";
  *
  * More details: https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.1.0/com.ibm.zos.v2r1.halu001/autosubmit.htm
  *
- * @example
- * new JobEntrySubSystem({
- *  port: 21,
- *  host:
- * })
  */
 export class JobEntrySubsystem {
 
@@ -46,6 +40,9 @@ export class JobEntrySubsystem {
           })
           .then((responseText) => {
             return this.get(ftpSession, remoteFileName);
+          })
+          .then ((buffer) => {
+            return resolve(buffer);
           })
           .catch((error) => {
             console.error(error);
@@ -99,7 +96,10 @@ export class JobEntrySubsystem {
       ftpSession.get(remoteFileName, (error: Error, stream: Readable) => {
         if (error) { reject(error); }
         stream.once("close", () => { ftpSession.end(); });
-        return resolve(getRawBody(stream));
+        getRawBody(stream)
+          .then( (buffer) => {
+            resolve(buffer);
+          });
       });
     });
   }
