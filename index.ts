@@ -45,7 +45,7 @@ export class JobEntrySubsystem {
             return resolve(buffer);
           })
           .catch((error) => {
-            console.error(error);
+            return reject(error);
           });
       });
       ftpSession.connect(this.connectionOptions);
@@ -98,7 +98,7 @@ export class JobEntrySubsystem {
         stream.once("close", () => { ftpSession.end(); });
         getRawBody(stream)
           .then( (buffer) => {
-            resolve(buffer);
+            return resolve(buffer);
           });
       });
     });
