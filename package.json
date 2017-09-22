@@ -10,6 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jsftp": "^1.5.5"
+    "@types/ftp": "^0.3.29",
+    "ftp": "^0.3.10",
+    "promise": "^8.0.1",
+    "raw-body": "^2.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.28",
+    "@types/promise": "^7.1.30"
   }
 }
