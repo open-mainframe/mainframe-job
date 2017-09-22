@@ -9,6 +9,9 @@ In contast to other computer architectures, most work performed on a mainframe i
 # What does Mainframe-Job do?
 mainframe-job is a Node.js module that wrappers the z/OS-specific services made accessible over ftp. This allows direct submission of jobs from Node.js to the z/OS Job Entry Subsystem.
 
+# Contributors 🙌 🙌 🙌 🙌
+- Micah Rairdon ([Tiberriver256](https://github.com/Tiberriver256))
+
 # Special Thanks
 This module is inspired by a python script written by Northern Illinois University called [JESzftp](https://github.com/niumainframe/JESftp). There aren't many universities teaching mainframes these days, and it's awesome to see students working to bridge traditional Enterprise technologies with the world of open-source software. Go Huskies!!!
 
